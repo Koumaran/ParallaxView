@@ -112,6 +112,9 @@ extension UIView: AnyParallaxableView {
                     subview.addMotionEffect(group)
             }
         }
+		UIView.animate(withDuration: 0.1) {
+			self.transform = CGAffineTransform(scaleX: 1.15, y: 1.15)
+		}
     }
     
     public func removeParallaxMotionEffects(with options: ParallaxEffectOptions? = nil) {
@@ -124,6 +127,9 @@ extension UIView: AnyParallaxableView {
 
         options?.glowImageView.motionEffects.removeAll()
         options?.glowImageView.removeFromSuperview()
+		UIView.animate(withDuration: 0.1) {
+			self.transform = .identity
+		}
     }
     
 }
