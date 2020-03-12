@@ -113,7 +113,7 @@ extension UIView: AnyParallaxableView {
             }
         }
 		UIView.animate(withDuration: 0.1) {
-			self.transform = CGAffineTransform(scaleX: 1.15, y: 1.15)
+			self.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
 		}
     }
     
